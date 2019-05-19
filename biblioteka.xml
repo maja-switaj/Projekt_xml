@@ -1,22 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE biblioteka SYSTEM "biblioteka.dtd">
-<?xml-stylesheet type="text/css" href="biblioteka.css"?> 
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+<!DOCTYPE biblioteka
+[<!ELEMENT biblioteka ( ksiazka*,  kategoria*)>
+<!ELEMENT ksiazka (tytul, autor, info, rok_wydania)>
+<!ATTLIST ksiazka 
+  kategoria IDREF #REQUIRED
+  id ID #REQUIRED
+  opcja CDATA #IMPLIED
+  oprawa (twarda|miękka)  #REQUIRED
+>
+<!ELEMENT kategoria (#PCDATA)>
+<!ATTLIST kategoria
+ skrot ID #IMPLIED
+>
+<!ELEMENT tytul (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT rok_wydania (#PCDATA)>
+]>
+ 
 <biblioteka>
-	 
-	<ksiazka id="1" kategoria="psych" oprawa="twarda" opcja="ebook" rok wydania="2011">
+	<ksiazka id="a" kategoria="psych" oprawa="twarda" opcja="ebook">
 		<tytul>Człowiek w poszukiwaniu sensu</tytul>
 		<autor>Viktor E. Frankl</autor>
 		<info>Człowiek w poszukiwaniu sensu" to bez wątpienia jedno z najbardziej wpływowych dzieł dla psychiatrii i psychoterapii. 
 		Powstało pod wpływem przeżyć autora w trakcie jego pięcioletniego pobytu w Auschwitz i innych obozach koncentracyjnych 
 		utworzonych przez nazistów. </info>
+		<rok_wydania>2011</rok_wydania>
 	</ksiazka>
-	<ksiazka id="2" kategoria="inf" oprawa="twarda" rok wydania="2019">
+	<ksiazka id="b" kategoria="inf" oprawa="twarda" opcja = "ebook">
 		<tytul>Witamy we Wszechświecie. Podróż astrofizyczna</tytul>
 		<autor>Neil deGrasse Tyson John Richard Gott Michael A Strauss </autor>
 		<info>Opisując najnowsze odkrycia astrofizyki, książka przenosi czytelnika z naszego własnego układu 
 		słonecznego do najdalszych granic przestrzeni.</info>
+		<rok_wydania>2019</rok_wydania>
 	</ksiazka>
-	<ksiazka id="3" kategoria="nak" oprawa="miękka" rok wydania="2018">
+	<ksiazka id="c" kategoria="nak" oprawa="miękka"  opcja = "ebook">
 		<tytul>O pisaniu. Na chłodno</tytul>
 		<autor>Remigiusz Mróz</autor>
 		<info> Publikacja "O pisaniu. Na chłodno" została podzielona na dwie części. Pierwsza z nich skupia się na samej osobie autora.
@@ -24,61 +43,70 @@
 		Druga z wydzielonych części przybiera formę poradnika. Autor tłumaczy w niej młodym adeptom sztuki pisarskiej, 
 		w jaki sposób zachować rytm tekstu, jak poprawnie i przejrzyście budować dialogi, a także jak redagować już napisany manuskrypt.
 		</info>
+		<rok_wydania>2019</rok_wydania>
 	</ksiazka>
-	<ksiazka id="4" kategoria="poz" oprawa="miękka" opcja="ebook" rok wydania="2003">
+	<ksiazka id="d" kategoria="poz" oprawa="miękka" opcja="ebook">
 		<tytul>Pielgrzym</tytul>
 		<autor>Paulo Coelho</autor>
 		<info>Bohater książki wyrusza w podróż szlakiem pielgrzymkowym do Santiago de Compostela. Towarzyszy mu przewodnik – niejaki Petrus,
 		pod którego okiem pielgrzym jest poddawany najrozmaitszym próbom i ćwiczeniom, podczas gdy osiąga kolejne poziomy wtajemniczenia,
 		czym zbliża się do końca swej wędrówki. W tej podróży spotka przeróżne anioły i demony, zostaje 
 		przyjęty do tajnego stowarzyszenia Regnus Agnus Mundi.</info>
+		<rok_wydania>2003</rok_wydania>
 	</ksiazka>
-	<ksiazka id="5" kategoria="sens" oprawa="twarda" rok wydania="2013">
+	<ksiazka id="e" kategoria="sens" oprawa="twarda"  opcja = "ebook">
 		<tytul>Inferno</tytul>
 		<autor>Dan Brown</autor>
 		<info>Światowej sławy specjalista od symboli, Robert Langdon budzi się na szpitalnym łóżku w zupełnie obcym miejscu. 
 		Nie pamięta, jak i dlaczego znalazł się w szpitalu. Nie potrafi też wyjaśnić, w jaki sposób wszedł w posiadanie tajemniczego
 		przedmiotu, który znajduje we własnej marynarce.</info>
+		<rok_wydania>2013</rok_wydania>
 	</ksiazka>
-	<ksiazka id="6" kategoria="poz" oprawa="twarda" opcja="ebook" rok wydania="1998">
+	<ksiazka id="f" kategoria="poz" oprawa="twarda" opcja="ebook">
 		<tytul>Piąta góra</tytul>
 		<autor>Paulo Coelho </autor>
 		<info>Książka opowiada o Eliaszu[2], proroku zmuszonym do ucieczki z rodzinnego miasta. Objawił mu się anioł i powiedział 
 		co powinien dalej robić i dokąd pójść. Bohater uczynił to, co polecił mu anioł: udał się do domu niewiasty z dzieckiem,
 		która miała go przyjąć, napoić i nakarmić. </info>
+		<rok_wydania>1998</rok_wydania>
 	</ksiazka>
-	<ksiazka id="7" kategoria="krym" oprawa="twarda" opcja="ebook" rok wydania="1920">
+	<ksiazka id="g" kategoria="krym" oprawa="twarda" opcja="ebook">
 		<tytul>Tajemnicza historia w Styles</tytul>
 		<autor>	Agatha Christie</autor>
 		<info>Kapitan Arthur Hastings, weteran pierwszej wojny światowej, dostaje propozycję spędzenia urlopu zdrowotnego w Styles,
 		na terenie posiadłości Johna Cavendisha, swojego dobrego kolegi z młodych lat. Hastingsowi bardzo miło jest zobaczyć po latach 
 		starych znajomych, jednak szybko orientuje się, że atmosfera w Styles daleka jest od przyjemnej.</info>
+		<rok_wydania>1920</rok_wydania>
 	</ksiazka>
-	<ksiazka id="8" kategoria="rom" oprawa="twarda" opcja="ebook" rok wydania="1930">
+	<ksiazka id="h" kategoria="rom" oprawa="twarda" opcja="ebook">
 		<tytul>Chleb olbrzyma</tytul>
 		<autor>Agatha Christie</autor>
 		<info>Młody Vernon Deyre odkrywa u siebie niespodzianie ogromny talent muzyczny; znawcy twierdzą, że jest geniuszem. Musi
 		jednak wybierać: albo poświęci się całkowicie komponowaniu, albo poślubi ukochaną kobietę, rezygnując z największej pasji 
 		swego życia..</info>
+		<rok_wydania>1930</rok_wydania>
 	</ksiazka>
-	<ksiazka id="9" kategoria="krym" oprawa="twarda" opcja="ebook" rok wydania="2012">
+	<ksiazka id="i" kategoria="krym" oprawa="twarda" opcja="ebook">
 		<tytul>Sprawa Niny Frank</tytul>
 		<autor>Katarzyna Bonda</autor>
 		<info>Akcja powieści rozgrywa się w dwóch światach: jeden to sielska miejscowość przygraniczna - Mielnik nad Bugiem, gdzie do
 		tej pory nie działo się nic oprócz lokalnych skandali, a życie płynęło leniwie, drugi - to high life stolicy, w którym żyje
 		najpopularniejsza aktorka polskich seriali - Nina Frank. </info>
+		<rok_wydania>2002</rok_wydania>
 	</ksiazka>
-	<ksiazka id="10" kategoria="krym" oprawa="twarda" opcja="ebook" rok wydania="2015">
+	<ksiazka id="j" kategoria="krym" oprawa="twarda" opcja="ebook">
 		<tytul>Okularnik</tytul>
 		<autor>Katarzyna Bonda</autor>
 		<info> Sasza Załuska postanawia wrócić do policji. Najpierw jednak wyjeżdża na Podlasie do Hajnówki, by raz na zawsze uporządkować 
 		swoje życie osobiste. Profilerka uczestniczy w tradycyjnym białoruskim weselu i staje się świadkiem dramatycznych wydarzeń.</info>
+		<rok_wydania>2015</rok_wydania>
 	</ksiazka>
 	 
 	<kategoria skrot="psych">psychologia</kategoria>
 	<kategoria skrot="poz">poezja</kategoria>
-	<kategoria skrot="sens">sensacyjne<kategoria>
-	<kategoria skrot="nak">naukowe<kategoria>
-	<kategoria skrot="krym">kryminaly<kategoria>
-	<kategoria skrot="rom">romanse<kategoria>
+	<kategoria skrot="sens">sensacyjne</kategoria>
+	<kategoria skrot="nak">naukowe</kategoria>
+	<kategoria skrot="krym">kryminaly</kategoria>
+	<kategoria skrot="rom">romanse</kategoria>
+	<kategoria skrot="inf">informatyka</kategoria>
 </biblioteka>

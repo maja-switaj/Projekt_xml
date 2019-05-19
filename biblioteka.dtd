@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE biblioteka
-[<!ELEMENT biblioteka ( ksiazka*,  kategoria**)>
+[
+<!ELEMENT biblioteka ( ksiazka)*>
 <!ELEMENT ksiazka (tytul, autor, info)>
-<!ATTLIST ksiazka 
-  kategoria IDREF #REQUIRED
-  id ID #REQUIRED
-  opcja CDATA #IMPLIED
-  oprawa (twarda|miękka)  #REQUIRED
->
-<!ELEMENT kategoria (#PCDATA)>
-<!ATTLIST kategoria
- skrot ID #IMPLIED
->
 <!ELEMENT tytul (#PCDATA)>
 <!ELEMENT autor (#PCDATA)>
 <!ELEMENT info (#PCDATA)>
-]>
+<!ATTLIST ksiazka kategoria IDREF #REQUIRED>
+<!ATTLIST ksiazka id ID #REQUIRED>
+<!ATTLIST ksiazka opcja PCDATA #IMPLIED>
+<!ATTLIST ksiazka oprawa (twarda|miękka)  #REQUIRED>
+<!ATTLIST ksiazka rok_wydania  #REQUIRED>
+
+<!ATTLIST kategoria skrot ID #IMPLIED>
+ 
+]
+>

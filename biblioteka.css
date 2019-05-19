@@ -2,8 +2,11 @@ biblioteka {
     background-color: black;
     width: 100%;
 }
-ksiazka {
-    color: white;
-    width: 100%;
-}
- 
+ ksiazka {
+	display: block;
+	font-size: 14pt;
+	font-weight: bold;
+	padding: 10px;
+	background-color: white
+	}
+  

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+ 
+<xs:element name="tytul" type="xs:string"/>
+<xs:element name="autor" type="xs:string"/>
+<xs:element name="info" type="xs:string"/>
+<xs:element name="rok_wydania" type="xs:int"/>
+ 
+
+<!-- definition of attributes -->
+<xs:attribute name="id" type="xs:string"/>
+<xs:attribute name="kategoria" type="xs:string"/>
+<xs:attribute name="oprawa" type="xs:string"/>
+<xs:attribute name="opcja" type="xs:string"/>
+<xs:attribute name="skrot" type="xs:string"/>
+
+<!-- definition of complex elements -->
+<xs:element name="biblioteka">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="ksiazka" maxOccurs="unbounded"/>
+	  <xs:element ref="kategoria" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+</xs:element>
+
+ <xs:element name="ksiazka">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="tytul"/>
+      <xs:element ref="autor"/>
+      <xs:element ref="info" maxOccurs="unbounded"/>
+	  <xs:element ref="rok_wydania"/>
+    </xs:sequence>
+    <xs:attribute ref="id" use="required"/>
+	<xs:attribute ref="kategoria" use="required"/>
+	<xs:attribute ref="oprawa" use="required"/>
+	<xs:attribute ref="opcja" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+ <xs:element name="kategoria">
+  <xs:complexType>
+   <xs:simpleContent>
+   <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="skrot" use="optional"/>
+   </xs:extension>   
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+
+</xs:schema>
