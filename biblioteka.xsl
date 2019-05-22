@@ -9,7 +9,7 @@
   <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
     <p>
     <xsl:value-of select="info"/>
-    <span style="font-style:italic"> (<xsl:value-of select="rok wydania"/> rok wydania)</span>
+    <span style="font-style:italic"> (rok wydania: <xsl:value-of select="rok_wydania"/>)</span>
     </p>
   </div>
 </xsl:for-each>
