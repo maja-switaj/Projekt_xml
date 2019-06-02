@@ -20,7 +20,7 @@
 <!ELEMENT info (#PCDATA)>
 <!ELEMENT rok_wydania (#PCDATA)>
 ]>
- 
+
 <biblioteka>
 	<ksiazka id="a" kategoria="psych" oprawa="twarda" opcja="ebook">
 		<tytul>Człowiek w poszukiwaniu sensu</tytul>
