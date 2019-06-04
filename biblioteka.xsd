@@ -4,9 +4,17 @@
 <!-- definition of simple elements -->
  
 <xs:element name="tytul" type="xs:string"/>
+ 
 <xs:element name="autor" type="xs:string"/>
 <xs:element name="info" type="xs:string"/>
-<xs:element name="rok_wydania" type="xs:int"/>
+<xs:element name="rok_wydania" >
+<xs:simpleType>
+    <xs:restriction base="xs:int">
+      <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
  
 
 <!-- definition of attributes -->
